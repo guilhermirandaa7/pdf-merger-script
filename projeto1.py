@@ -3,13 +3,13 @@ import os
 
 merger = PyPDF2.PdfMerger()
 
-file_list = os.listdir("file")
-file_list.sort()
-print(file_list)
+files_list = os.listdir("files")
+files_list.sort()
+print(files_list)
 
 
-for file in file_list:
+for file in files_list:
     if ".pdf" in file:
-        merger.append(f"file/{file}")
+        merger.append(f"files/{file}")
 
 merger.write("Final PDF.pdf")
